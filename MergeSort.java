@@ -1,4 +1,5 @@
 class MergeSort{
+    //divide
     static void mergeSort(int[] arr, int n){
         if(n<2) return;
 
@@ -16,7 +17,7 @@ class MergeSort{
 
         merge(arr, lArr, rArr, mid, n-mid); 
     }
-
+    //merge function
     static void merge(int[] arr, int[] lArr, int[] rArr, int left, int right){
         int i=0, j=0, k=0;
         while(i<left && j<right){
@@ -30,10 +31,10 @@ class MergeSort{
         }
 
         while(i<left){
-            arr[k]=lArr[i]; i++;
+            arr[k]=lArr[i]; i++; k++;
         }
         while(j<right){
-            arr[k]=rArr[j]; j++;
+            arr[k]=rArr[j]; j++; k++;
         }
     }
 
@@ -42,7 +43,7 @@ class MergeSort{
         System.out.println();
     }
     public static void main(String args[]){
-        int arr[]={1000, 10, 55, 100, 1};
+        int arr[]={1000, 10, 55, 100, 1, -30, -40, -100};
         int n=arr.length;
 
         System.out.println("Before Merge Sort");
